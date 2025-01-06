@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    margin: 0;
+    padding: 180px;
+    flex-direction: column;
+    background-color: #f4f6f8;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.content-box {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="date"],
+select,
+button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+/* Customer Booking Button */
+form button[type="submit"] {
+    display: block;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1e88e5;
+}
+
+#confirmation {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1em;
+    color: #4caf50;
+}
+
+/* Time slots grid for manager view */
+#timeSlotsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slot span {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Button colors for time slots */
+.slot button {
+    padding: 5px;
+    width: 100%;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Open and Closed Button Colors */
+.open {
+    background-color: #4caf50;
+    color: white;
+}
+
+.open:hover {
+    background-color: #45a049;
+}
+
+.closed {
+    background-color: #f44336;
+    color: white;
+}
+
+.closed:hover {
+    background-color: #e53935;
+}
+
+/* Save button and confirmation */
+#saveSchedule {
+    display: block;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    max-width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+#saveSchedule:hover {
+    background-color: #1e88e5;
+}
+
+#saveConfirmation {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #4caf50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    form, #timeSlotsContainer, #saveSchedule {
+        width: 90%;
+    }
+
+    .slot {
+        font-size: 0.9em;
+    }
+}
